@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "Kiến Trúc Thiêng",
+      "hasCanvas": false,
+      "bodyTextLen": 240,
+      "bodyTextHash": "965219dc42830f88a23d65cc1be54227ad6345a9ce159e46a696b52baff82032",
+      "bodyTextPrefix": "MỘT BỘ PHIM LỊCH SỬ · SỬ 10 Kiến Trúc Thiêng Những công trình Ph",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "Kiến Trúc Thiêng",
+      "hasCanvas": false,
+      "bodyTextLen": 165,
+      "bodyTextHash": "75e3b65d9f1c0d604b5865951609b23f1076d75577e87d552894df4f7d0b17f9",
+      "bodyTextPrefix": "MỘT BỘ PHIM LỊCH SỬ · SỬ 10 Kiến Trúc Thiêng Những công trình Ph",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-preview.json"
+}

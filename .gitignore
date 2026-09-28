@@ -1,0 +1,5 @@
+node_modules/ 
+.versel/ 
+dist/ 
+.env 
+.env.* 
