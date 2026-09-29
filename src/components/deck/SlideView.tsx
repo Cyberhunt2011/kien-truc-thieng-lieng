@@ -12,6 +12,8 @@ export function SlideView({
   onJump: (id: string) => void;
 }) {
   switch (slide.type) {
+    case "members":
+      return <MembersSlide slide={slide} />;
     case "title":
       return <TitleSlide slide={slide} />;
     case "quote":
@@ -70,6 +72,58 @@ function Bg({ src, slow }: { src: string; slow?: boolean }) {
         className={cn("img-frame h-full w-full object-cover", slow ? "kenburns-slow" : "kenburns")}
       />
       <div className="absolute inset-0 bg-linear-to-t from-ink via-ink/55 to-ink/20" />
+    </div>
+  );
+}
+
+function MembersSlide({ slide }: { slide: Extract<Slide, { type: "members" }> }) {
+  const collage = [
+    "/images/taj-dawn.jpg",
+    "/images/sanchi.jpg",
+    "/images/ajanta-gorge.jpg",
+    "/images/mahabodhi.jpg",
+    "/images/red-fort.jpg",
+    "/images/jama-masjid.jpg",
+  ];
+
+  return (
+    <div className="relative flex h-full flex-col overflow-hidden px-5 pt-16 pb-20 md:px-12 md:pt-16">
+      <div className="absolute inset-0 grid grid-cols-3 grid-rows-2 opacity-30">
+        {collage.map((src) => (
+          <img key={src} src={src} alt="" className="h-full w-full object-cover" />
+        ))}
+      </div>
+      <div className="absolute inset-0 bg-ink/85" />
+      <div className="absolute inset-0 bg-linear-to-br from-ink/60 via-ink/80 to-ink" />
+
+      <div className="relative z-10 mb-4 flex items-end justify-between gap-4">
+        <div>
+          <p className="chip">Đội ngũ thực hiện</p>
+          <h1 className="mt-3 font-display text-4xl leading-none text-ivory italic md:text-6xl">
+            Thành viên & nhiệm vụ
+          </h1>
+        </div>
+        <p className="hidden max-w-xs text-right text-sm text-ivory-dim md:block">
+          Hành trình kiến trúc Ấn Độ qua lịch sử, tôn giáo, khoa học và di sản.
+        </p>
+      </div>
+
+      <div className="relative z-10 grid min-h-0 flex-1 grid-cols-2 gap-2.5 overflow-hidden md:gap-3">
+        {slide.members.map((member, index) => (
+          <article
+            key={member.name}
+            className="flex min-h-0 items-start gap-2.5 rounded-xl border border-gold/15 bg-ink/55 px-3 py-2.5 backdrop-blur-sm md:px-4 md:py-3"
+          >
+            <span className="font-display text-lg leading-none text-gold md:text-2xl">
+              {String(index + 1).padStart(2, "0")}
+            </span>
+            <div className="min-w-0">
+              <h2 className="font-display text-lg leading-tight text-ivory md:text-2xl">{member.name}</h2>
+              <p className="mt-1 text-sm leading-snug text-ivory-dim md:text-base">{member.task}</p>
+            </div>
+          </article>
+        ))}
+      </div>
     </div>
   );
 }
@@ -237,7 +291,7 @@ function CardsSlide({ slide }: { slide: Extract<Slide, { type: "cards" }> }) {
         <div className="stagger-in grid gap-3 md:grid-cols-2">
           {slide.cards.map((c) => (
             <article key={c.title} className="fact-card">
-              <p className="font-display text-2xl text-ivory">{c.title}</p>
+              <p className="font-display text-3xl text-ivory">{c.title}</p>
               {c.meta ? <p className="mt-1 text-xs tracking-wide text-gold">{c.meta}</p> : null}
               <p className="mt-3 text-base text-ivory-dim">{c.body}</p>
             </article>
@@ -319,7 +373,7 @@ function CreditsSlide({ slide }: { slide: Extract<Slide, { type: "credits" }> })
           A-dục gieo tháp. Akbar dựng thành đỏ. Shah Jahan viết bằng cẩm thạch. Nhóm ôn lại bằng điền
           từ, ABCD và nối cột.
         </p>
-        <p className="mt-8 text-xs tracking-[0.22em] text-gold uppercase">Kiến Trúc Thiêng · Sử 10</p>
+        <p className="mt-8 text-xs tracking-[0.22em] text-gold uppercase">Thuyết trình lịch sử nhóm 2 · 10A09</p>
         <div className="mt-6 flex flex-wrap gap-2">
           <span className="chip">Sanchi</span>
           <span className="chip">Ajanta</span>

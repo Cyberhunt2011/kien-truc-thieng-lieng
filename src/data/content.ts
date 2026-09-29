@@ -5,6 +5,13 @@ export type Fact = { label: string; value: string };
 export type Slide =
   | {
       id: string;
+      type: "members";
+      chapter: Chapter;
+      image: string;
+      members: { name: string; task: string }[];
+    }
+  | {
+      id: string;
       type: "title";
       chapter: Chapter;
       image: string;
@@ -104,6 +111,24 @@ export const IMG = {
 } as const;
 
 export const slides: Slide[] = [
+  {
+    id: "members",
+    type: "members",
+    chapter: "open",
+    image: IMG.taj,
+    members: [
+      { name: "Bảo Châu", task: "Giới thiệu điều kiện tự nhiên lưu vực sông Ấn – sông Hằng và thành cổ Harappa." },
+      { name: "Thảo Uyên", task: "Giới thiệu giai đoạn Vê-đê và sự hình thành xã hội phân hóa đẳng cấp." },
+      { name: "Bích Hà", task: "Giới thiệu sự ra đời của Hindu giáo và Phật giáo ban đầu." },
+      { name: "Tấn Phúc", task: "Giới thiệu thời kỳ hoàng kim, thịnh trị về toán học, thiên văn học, nghệ thuật." },
+      { name: "Vĩnh An", task: "Giới thiệu bước chuyển khi vương triều Hồi giáo đặt nền móng tại Đê-li." },
+      { name: "Minh Khôi", task: "Giới thiệu đế quốc Mô-gôn và thời kỳ đỉnh cao thứ hai với các di sản kiến trúc." },
+      { name: "Mỹ Huỳnh", task: "Giới thiệu các công trình kiến trúc tiêu biểu gắn liền với Phật giáo và Hồi giáo." },
+      { name: "Bảo Khang", task: "Giới thiệu hệ thống chữ Phạn (Sanskrit) và đóng góp về khoa học (chữ số 0)." },
+      { name: "Gia Phát", task: "Xâu chuỗi lời thoại, kiểm tra bám sát nội dung SGK và khớp kịch bản với Slide." },
+      { name: "Hoàng Phúc", task: "Thiết kế Presentation cùng với AI." },
+    ],
+  },
   {
     id: "title",
     type: "title",
@@ -737,7 +762,7 @@ export const fillQuestions = [
 export const mcqQuestions = [
   {
     q: "Ai cho xây Đại tháp Sanchi?",
-    choices: ["Akbar", "A-dục (Ashoka)", "Shah Jahan", "Harishena"],
+    choices: ["Phuc Magnus", "A-dục (Ashoka)", "Shah Jahan", "Harishena"],
     correct: 1,
     explain: "A-dục khởi công lõi gạch thế kỉ III TCN; Shunga–Satavahana mới bọc đá và dựng torana.",
   },
@@ -778,7 +803,7 @@ export const mcqQuestions = [
   },
   {
     q: "Thời kì nào được xem là đỉnh cao kiến trúc Mô-gôn?",
-    choices: ["Babur", "Aurangzeb", "Shah Jahan (1628–1658)", "Bahadur Shah II"],
+    choices: ["Babur", "Aurangzeb", "Shah Jahan (1628–1658)", "PhucMagnus 2011"],
     correct: 2,
     explain: "Aurangzeb rộng đất nhất; Shah Jahan là đỉnh của đá, vòm và cẩm thạch.",
   },
