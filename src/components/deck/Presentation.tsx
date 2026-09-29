@@ -87,7 +87,7 @@ export function Presentation() {
       <div className="film-grain pointer-events-none absolute inset-0 z-10" />
 
       <header className="absolute top-0 right-0 left-0 z-20 flex items-center justify-between px-4 pt-4 md:px-6">
-        <p className="text-[11px] tracking-[0.22em] text-ivory-dim uppercase">Kiến Trúc Thiêng</p>
+        <p className="text-[11px] tracking-[0.22em] text-ivory-dim uppercase">Kiến Trúc Thiêng Liêng</p>
         <div className="hidden items-center gap-1 md:flex">
           {chapters.map((c) => (
             <button

@@ -109,7 +109,7 @@ export const slides: Slide[] = [
     type: "title",
     chapter: "open",
     image: IMG.taj,
-    kicker: "Thuyết trình lịch sử nhóm 2 · Sử 10",
+    kicker: "Thuyết trình lịch sử nhóm 2 · 10A09",
     title: "Kiến Trúc Thiêng Liêng",
     subtitle: "Những công trình Phật giáo và Hồi giáo tiêu biểu trên tiểu lục địa Ấn Độ",
   },
