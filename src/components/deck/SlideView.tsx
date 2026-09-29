@@ -122,8 +122,8 @@ function TocSlide({ slide }: { slide: Extract<Slide, { type: "toc" }> }) {
             <li key={item.n} className="fact-card flex items-baseline gap-4">
               <span className="font-display text-3xl text-gold">{item.n}</span>
               <span>
-                <span className="block font-display text-2xl text-ivory">{item.title}</span>
-                <span className="text-sm text-ivory-dim">{item.hint}</span>
+                <span className="block font-display text-3xl text-ivory">{item.title}</span>
+                <span className="text-base text-ivory-dim">{item.hint}</span>
               </span>
             </li>
           ))}
@@ -146,7 +146,7 @@ function MapSlide({
       <div className="stagger-in relative z-10 mb-4">
         <p className="chip">Bản đồ</p>
         <h2 className="mt-3 font-display text-4xl text-ivory md:text-6xl">Sáu điểm trên một dải đất</h2>
-        <p className="mt-2 text-sm text-ivory-dim">Chạm vào điểm sáng để nhảy tới công trình.</p>
+        <p className="mt-2 text-base text-ivory-dim">Chạm vào điểm sáng để nhảy tới công trình.</p>
       </div>
       <div className="relative z-10 min-h-0 flex-1">
         <IndiaMap onJump={onJump} />
@@ -201,12 +201,12 @@ function SplitSlide({ slide }: { slide: Extract<Slide, { type: "split" }> }) {
             {slide.facts.map((f) => (
               <div key={f.label} className="fact-card">
                 <dt className="text-[10px] tracking-[0.18em] text-gold uppercase">{f.label}</dt>
-                <dd className="mt-1 text-sm text-ivory">{f.value}</dd>
+                <dd className="mt-1 text-base text-ivory">{f.value}</dd>
               </div>
             ))}
           </dl>
           {slide.body.map((p) => (
-            <p key={p} className="mt-4 text-sm leading-relaxed text-ivory-dim md:text-[15px]">
+            <p key={p} className="mt-4 text-base leading-relaxed text-ivory-dim md:text-[17px]">
               {p}
             </p>
           ))}
@@ -239,7 +239,7 @@ function CardsSlide({ slide }: { slide: Extract<Slide, { type: "cards" }> }) {
             <article key={c.title} className="fact-card">
               <p className="font-display text-2xl text-ivory">{c.title}</p>
               {c.meta ? <p className="mt-1 text-xs tracking-wide text-gold">{c.meta}</p> : null}
-              <p className="mt-3 text-sm text-ivory-dim">{c.body}</p>
+              <p className="mt-3 text-base text-ivory-dim">{c.body}</p>
             </article>
           ))}
         </div>
@@ -265,7 +265,7 @@ function TimelineSlide({ slide }: { slide: Extract<Slide, { type: "timeline" }> 
             <span className="font-display text-lg text-gold tabular-nums">{e.year}</span>
             <span>
               <span className="block font-display text-xl text-ivory">{e.title}</span>
-              <span className="text-sm text-ivory-dim">{e.body}</span>
+              <span className="text-base text-ivory-dim">{e.body}</span>
             </span>
           </li>
         ))}
@@ -287,7 +287,7 @@ function CompareSlide({ slide }: { slide: Extract<Slide, { type: "compare" }> })
             <h2 className="mt-3 font-display text-4xl text-ivory md:text-5xl">{col.title}</h2>
             <ul className="mt-5 space-y-2">
               {col.points.map((p) => (
-                <li key={p} className="text-sm text-ivory-dim">
+                <li key={p} className="text-base text-ivory-dim">
                   {p}
                 </li>
               ))}
