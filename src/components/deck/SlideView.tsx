@@ -78,7 +78,7 @@ function Bg({ src, slow }: { src: string; slow?: boolean }) {
 
 function MembersSlide({ slide }: { slide: Extract<Slide, { type: "members" }> }) {
   const collage = [
-    "/images/taj-dawn.jpg",
+    "/images/da.jpg",
     "/images/sanchi.jpg",
     "/images/ajanta-gorge.jpg",
     "/images/mahabodhi.jpg",
@@ -104,7 +104,7 @@ function MembersSlide({ slide }: { slide: Extract<Slide, { type: "members" }> })
           </h1>
         </div>
         <p className="hidden max-w-xs text-right text-sm text-ivory-dim md:block">
-          Hành trình kiến trúc Ấn Độ qua lịch sử, tôn giáo, khoa học và di sản.
+          Hành trình Ấn Độ qua lịch sử, tôn giáo, khoa học, kiến trúc và di sản.
         </p>
       </div>
 
