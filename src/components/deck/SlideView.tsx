@@ -100,7 +100,7 @@ function MembersSlide({ slide }: { slide: Extract<Slide, { type: "members" }> })
         <div>
           <p className="chip">Đội ngũ thực hiện</p>
           <h1 className="mt-3 font-display text-4xl leading-none text-ivory italic md:text-6xl">
-            Thành viên & nhiệm vụ
+            Thành viên 🐧 nhiệm vụ
           </h1>
         </div>
         <p className="hidden max-w-xs text-right text-sm text-ivory-dim md:block">
